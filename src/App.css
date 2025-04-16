@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.BorderOn{
+  border-bottom: 2px solid #388E3C; 
+  color: #388E3C;
+  margin: 10px 10px;
+}
+
+
+.BorderOff{
+  margin: 10px 10px;
+}

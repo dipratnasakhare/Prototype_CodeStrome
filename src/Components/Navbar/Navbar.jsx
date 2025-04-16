@@ -1,17 +1,28 @@
 import React from "react";
-import { Flex, Spacer } from "@chakra-ui/react";
-import { Box } from '@chakra-ui/react'
+import { Flex, Image, Select, Spacer, Stack, Option, WrapItem, Avatar } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import Logo from "../Images/Logo.webp";
 
 const Navbar = () => {
   return (
     <div>
-      <Flex border={"1px"} padding={"5px"} templateColumns="repeat(5, 1fr)" gap={6}>
-        <Box>Logo</Box>
-        <Spacer />
-        <Box>Select</Box>
-        <Box></Box>
-        <Box></Box>
-        <Box>Profile</Box>
+      <Flex backgroundColor={"blackAlpha.300"} padding={"5px"} justifyContent={"space-around"}  gap={6}>
+        <Box>
+          <Image width={"40px"} src={Logo} alt="Dan Abramov" />{" "}
+        </Box>
+        {/* <Spacer /> */}
+        <Flex gap={"5rem"}>
+          <Box>
+          <WrapItem>
+            <Avatar
+                  size='md'
+
+              name="Kola Tioluwani"
+              src="https://avatars.githubusercontent.com/u/107991169?v=4"
+            />
+          </WrapItem>
+        </Box>
+        </Flex>
       </Flex>
     </div>
   );
