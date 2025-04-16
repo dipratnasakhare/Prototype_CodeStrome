@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const CalculaterNav = () => {
   return (
-    <nav>
+    <Box mt={"1px"} backgroundColor={"black"}>
       <NavLink
-        to="/House"
+        to="/"
         className={({ isActive }) => (isActive ? "BorderOn" : "BorderOff")}
       >
         House
@@ -24,7 +24,7 @@ const CalculaterNav = () => {
       >
         Motorbike
       </NavLink>
-    </nav>
+    </Box>
   );
 };
 

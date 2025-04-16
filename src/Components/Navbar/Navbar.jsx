@@ -5,10 +5,10 @@ import Logo from "../Images/Logo.webp";
 
 const Navbar = () => {
   return (
-    <div>
-      <Flex backgroundColor={"blackAlpha.300"} padding={"5px"} justifyContent={"space-around"}  gap={6}>
+    <Box id="white" backgroundColor="#0c111f">
+      <Flex backgroundColor={"black.300"} padding={"5px"} justifyContent={"space-between"}  gap={6}>
         <Box>
-          <Image width={"40px"} src={Logo} alt="Dan Abramov" />{" "}
+          <Image width={"120px"} src={Logo} alt="Dan Abramov" />{" "}
         </Box>
         {/* <Spacer /> */}
         <Flex gap={"5rem"}>
@@ -16,15 +16,14 @@ const Navbar = () => {
           <WrapItem>
             <Avatar
                   size='md'
-
               name="Kola Tioluwani"
-              src="https://avatars.githubusercontent.com/u/107991169?v=4"
+              src="https://bit.ly/tioluwani-kolawole"
             />
           </WrapItem>
         </Box>
         </Flex>
       </Flex>
-    </div>
+    </Box>
   );
 };
 

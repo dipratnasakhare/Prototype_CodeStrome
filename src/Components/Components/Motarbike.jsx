@@ -9,12 +9,14 @@ import {
   FormLabel,
   Flex,
   Center,
+  Image,
 } from '@chakra-ui/react';
+import logo from "../Images/co2.jpg";
 
 const Motorbike = () => {
   const [distance, setDistance] = useState(); // miles per year
   const [efficiency, setEfficiency] = useState(); // mpg
-  const [emission, setEmission] = useState(0);
+  const [emission, setEmission] = useState();
 
   useEffect(() => {
     const EMISSION_FACTOR = 7.2; // kg CO₂ per gallon for motorcycles
@@ -48,14 +50,21 @@ const Motorbike = () => {
             type="number"
             placeholder="e.g., 50"
             value={efficiency}
-            onChange={(e) => setEfficiency(Number(e.target.value))}
+            onChange={(e) => setEfficiency(e.target.value)}
           />
         </FormControl>
         </Box>
 
-        <Box textAlign="center" mt={6} p={4} bg="gray.700" borderRadius="md">
+        <Box textAlign="center" mt={6} p={4} bg="#101820" borderRadius="md">
+          <Center>
+                      <Image src={logo} alt="Dan Abramov" />
+                    </Center>
+
+                          <Text fontSize="2xl">
+                                {emission === "NaN" ? "0.00" : emission}{" "}
+                              </Text>
           <Text fontSize="xl" color="green.300">
-            CO₂: {emission} metric tons/year
+     metric tons/year
           </Text>
         </Box>
       </Flex>
